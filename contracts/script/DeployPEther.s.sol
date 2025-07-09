@@ -20,7 +20,7 @@ contract DeployPEther is Script {
     address constant COMPTROLLER_ADDRESS =
         0xfB3f8837B1Ad7249C1B253898b3aa7FaB22E68aD; // Address of the deployed Unitroller proxy
     address constant INTEREST_RATE_MODEL_ADDRESS =
-        0xcf26c1EcB6482a9A626d986A8E3c87fb68f2F8f3; // Address of the deployed InterestRateModel
+        0x2d271dEb2596d78aaa2551695Ebfa9Cd440713aC; // Address of the deployed InterestRateModel
 
     // PToken Parameters (Adjust as needed)
     // Similar calculation as PErc20, but underlying decimals is always 18 for native currency

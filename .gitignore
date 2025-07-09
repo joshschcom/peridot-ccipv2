@@ -162,5 +162,11 @@ secrets/
 *.key
 wallet.json 
 
+# Miscellaneous
+
 QUICKSTART.md
 instructions.md
+ELIZA_OS_INTEGRATION.md
+ELIZA.md
+QUICKSTART_ELIZAOS.md
+GEMINI.md
