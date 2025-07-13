@@ -16,15 +16,15 @@ import "../contracts/PErc20Delegator.sol";
 contract DeployPErc20Fixed is Script {
     // --- CONFIGURATION ---
     address constant UNDERLYING_ERC20_ADDRESS =
-        0xcf5a6076cfa32686c0Df13aBaDa2b40dec133F1d;
+        0x760AfE86e5de5fa0Ee542fc7B7B713e1c5425701;
     address constant COMPTROLLER_ADDRESS =
         0xa41D586530BC7BC872095950aE03a780d5114445;
     address constant INTEREST_RATE_MODEL_ADDRESS =
         0x2d271dEb2596d78aaa2551695Ebfa9Cd440713aC;
 
-    uint256 constant INITIAL_EXCHANGE_RATE_MANTISSA = 2e16;
-    string constant PTOKEN_NAME = "Peridot Wrapped Bitcoin";
-    string constant PTOKEN_SYMBOL = "pWBTC";
+    uint256 constant INITIAL_EXCHANGE_RATE_MANTISSA = 2e26;
+    string constant PTOKEN_NAME = "Peridot Wrapped Monad";
+    string constant PTOKEN_SYMBOL = "pWMON";
     uint8 constant PTOKEN_DECIMALS = 8;
 
     // Reserve factor (15% = 0.15 * 1e18)

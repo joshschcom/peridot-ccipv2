@@ -10,7 +10,7 @@ contract SupportMarket is Script {
     address constant PERIDOTTROLLER_ADDRESS =
         0xa41D586530BC7BC872095950aE03a780d5114445;
     address constant PTOKEN_ADDRESS =
-        0x8f11d42EeaA6B454A040c2390501AFE16D150eB4; // PErc20Delegator (Proxy) address
+        0x8A1a797594997AE7f9972d5C5bD94F17C6A30282; // PErc20Delegator (Proxy) address
 
     function run() external {
         uint256 deployerPrivateKey = vm.envUint("PRIVATE_KEY");
@@ -33,7 +33,7 @@ contract SupportMarket is Script {
 
         // Set reserve factor (8% for higher supplier APY)
         PToken pToken = PToken(PTOKEN_ADDRESS);
-        uint256 reserveResult = pToken._setReserveFactor(0.08 * 1e18);
+        uint256 reserveResult = pToken._setReserveFactor(0.10 * 1e18);
         require(reserveResult == 0, "Failed to set reserve factor");
 
         vm.stopBroadcast();
@@ -41,6 +41,6 @@ contract SupportMarket is Script {
         console.log("Market configuration completed:");
         console.log("- Market supported in comptroller");
         console.log("- Collateral factor set to 75%");
-        console.log("- Reserve factor set to 8% (optimized for suppliers)");
+        console.log("- Reserve factor set to 10% (optimized for suppliers)");
     }
 }
